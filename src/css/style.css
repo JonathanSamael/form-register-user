@@ -1,9 +1,113 @@
 main {
     background: linear-gradient(#fcb310,#f7cc6f, #e1e1e1);
-    background-size: contain;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: auto;
+    width: 340px;
+    margin: 12px 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#name,
+#phone {
+    width: 298px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px;
+    height: 35px;
+    margin-top: 15px;
+}
+
+input::placeholder {
+    color: #a8a8a8;
+    font-weight: 700;
+}
+
+.container-form .text-fixed {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    align-content: flex-start;
+    margin: 12px 0 15px 0;
+}
+
+.container-form small {
+    visibility: hidden;
+    position: absolute;
+}
+
+.btn-send {
+    width: 298px;
+    background-color: #3CCC87;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+}
+
+/* ------- Campos imcompletos - erro -------- */
+
+.fill-field.error input#name,
+.fill-field.error input#phone {
+    border: 1px solid #F52E2E;
+}
+
+.container-form small.text-error {
+    visibility: visible;
+    color: #F52E2E;
+    font-size: 8px;
+    position: absolute;
+    top: 50px;
+}
+
+.container-form small.text-error:nth-child(2) {
+    top: 100px;
+}
+
+/* ------- Campos completos - enviado -------- */
+
+.fill-field.success input#name,
+.fill-field.success input#email,
+.fill-field.success input#phone,
+.fill-field.success textarea#message {
+    border: 1px solid #00C22B;
+}
+
+
+@media (max-width: 570px) {
+    main {
+        flex-direction: column;
+    }
+
+    .info-description {
+        text-align: center;
+    }
+
+    .container-form {
+        width: 320px;
+    }
 }
