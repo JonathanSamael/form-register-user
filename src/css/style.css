@@ -25,11 +25,17 @@ main {
     position: relative;
 }
 
+.container-form .main-title {
+    color: #000;
+    text-align: center;
+}
+
 #name,
 #phone {
     width: 298px;
-    border: 1px solid #000000;
-    border-radius: 5px;
+    background-color: transparent;
+    border: hidden;
+    border-bottom: 1px solid #000000;
     font-size: 15px;
     font-weight: 400;
     padding: 8px;
@@ -73,7 +79,7 @@ input::placeholder {
 
 .fill-field.error input#name,
 .fill-field.error input#phone {
-    border: 1px solid #F52E2E;
+    border-bottom: 2px solid #F52E2E;
 }
 
 .container-form small.text-error {
@@ -81,20 +87,18 @@ input::placeholder {
     color: #F52E2E;
     font-size: 8px;
     position: absolute;
-    top: 50px;
+    top: 80px;
 }
 
-.container-form small.text-error:nth-child(2) {
-    top: 100px;
+.container-form small.text-error:nth-child(3) {
+    top: 130px;
 }
 
 /* ------- Campos completos - enviado -------- */
 
 .fill-field.success input#name,
-.fill-field.success input#email,
-.fill-field.success input#phone,
-.fill-field.success textarea#message {
-    border: 1px solid #00C22B;
+.fill-field.success input#phone {
+    border-bottom: 2px solid #00C22B;
 }
 
 
