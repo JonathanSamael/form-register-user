@@ -1,0 +1,9 @@
+main {
+    background: linear-gradient(#fcb310,#f7cc6f, #e1e1e1);
+    background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
