@@ -1,0 +1,15 @@
+<div class="container-list">
+<h1 class="main-title">Lista de contatos</h1>
+
+<a href="/form"><button class="btn-new">Clique para incluir um novo contato</button></a><br/>
+
+{{#each showContacts}}
+
+    <p class="text-fixed">ID: {{contact_ID}}</p>
+    <h2 class="second-title">Contato: {{name}}</h2>
+    <p class="text-fixed">Idade: {{age}}</p>
+    <p class="text-fixed">Telefone: {{phone}}</p>
+    <a href="/deleted/{{contact_ID}}"><button class="btn-del">Deletar</button></a>
+    <hr>
+{{/each}}
+</div>
